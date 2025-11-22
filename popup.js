@@ -18,7 +18,6 @@ const statusText = document.getElementById('statusText');
 // 设置项元素
 const formatSelect = document.getElementById('formatSelect');
 const scaleSlider = document.getElementById('scaleSlider');
-const scaleValueDisplay = document.getElementById('scaleValue');
 const pageCountDisplay = document.getElementById('pageCount');
 const estDimensionsDisplay = document.getElementById('estDimensions');
 const estSizeDisplay = document.getElementById('estSize');
@@ -54,9 +53,8 @@ fileInput.addEventListener('change', async (e) => {
   await loadPDFInfo(file);
 });
 
-// 滑动条变化
-scaleSlider.addEventListener('input', (e) => {
-  scaleValueDisplay.innerText = e.target.value;
+// 清晰度选择变化
+scaleSlider.addEventListener('change', () => {
   updateEstimate();
 });
 
