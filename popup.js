@@ -154,12 +154,12 @@ function updateEstimate() {
   // 原始 RGBA 大小 (MB)
   const rawSizeMB = (totalPixels * 4) / (1024 * 1024);
   
-  // 压缩比估算: PNG~0.6, JPEG~0.1 (非常粗略)
+  // 压缩比估算: PNG~0.3, JPEG~0.05 (非常粗略)
   let estSizeMB = 0;
   if (format === 'png') {
-    estSizeMB = rawSizeMB * 0.6; 
+    estSizeMB = rawSizeMB * 0.3; 
   } else {
-    estSizeMB = rawSizeMB * 0.15;
+    estSizeMB = rawSizeMB * 0.05;
   }
 
   // 格式化显示
