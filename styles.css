@@ -1,0 +1,97 @@
+body {
+  width: 320px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 15px;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h3 {
+  margin: 0;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.section {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.upload-box {
+  text-align: center;
+}
+
+input[type="file"] { display: none; }
+
+.file-name {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+  word-break: break-all;
+}
+
+/* 按钮样式 */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.btn-outline {
+  border: 1px solid #4285f4;
+  color: #4285f4;
+  background: white;
+}
+.btn-outline:hover { background: #eef5ff; }
+
+.btn-primary { background-color: #4285f4; color: white; margin-top: 10px;}
+.btn-primary:hover { background-color: #3367d6; }
+
+.btn-success { background-color: #34a853; color: white; margin-top: 10px;}
+.btn-success:hover { background-color: #2d8e47; }
+
+/* 设置区域样式 */
+.control-group {
+  margin-bottom: 10px;
+}
+.control-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+select, input[type="range"] {
+  width: 100%;
+}
+
+.info-box {
+  background: #f0f2f5;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #555;
+}
+.info-box p { margin: 3px 0; display: flex; justify-content: space-between;}
+
+/* 进度条 */
+.status { font-size: 12px; margin-bottom: 5px; text-align: center; color: #666; }
+.progress-container {
+  width: 100%; background: #e0e0e0; border-radius: 4px; height: 6px; overflow: hidden;
+}
+.progress-bar { height: 100%; background: #4285f4; width: 0%; transition: width 0.2s; }

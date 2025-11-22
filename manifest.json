@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "PDF转长图工具",
+    "version": "1.0",
+    "description": "将PDF文件快速转换为一张长图片",
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "PDF转长图"
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }

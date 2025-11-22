@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF转长图 Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h3>PDF 转长图 Pro</h3>
+    
+    <!-- 1. 文件上传区 -->
+    <div class="section upload-box">
+      <input type="file" id="fileInput" accept="application/pdf">
+      <label for="fileInput" class="btn btn-outline">📁 选择 PDF 文件</label>
+      <div id="fileName" class="file-name">未选择文件</div>
+    </div>
+
+    <!-- 2. 设置区 (默认隐藏，上传后显示) -->
+    <div id="settingsArea" class="section settings-area" style="display:none;">
+      
+      <div class="control-group">
+        <label>输出格式：</label>
+        <select id="formatSelect">
+          <option value="png">PNG (无损，体积大)</option>
+          <option value="jpeg">JPEG (体积小，适合分享)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>清晰度/倍率：<span id="scaleValue">2.0</span>x</label>
+        <input type="range" id="scaleSlider" min="1" max="3" step="0.5" value="2">
+      </div>
+
+      <div class="info-box">
+        <p>页数: <span id="pageCount">0</span></p>
+        <p>预估尺寸: <span id="estDimensions">-</span></p>
+        <p>预估体积: <span id="estSize">-</span></p>
+      </div>
+
+      <button id="startBtn" class="btn btn-primary">开始转换</button>
+    </div>
+
+    <!-- 3. 状态与下载区 -->
+    <div id="statusArea" class="section" style="display:none;">
+      <div id="statusText" class="status">准备就绪</div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <button id="downloadBtn" class="btn btn-success" style="display:none;">下载长图</button>
+    </div>
+
+  </div>
+
+  <script src="lib/pdf.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
